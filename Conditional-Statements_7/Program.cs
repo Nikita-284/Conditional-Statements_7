@@ -31,7 +31,7 @@ class Program
 
         //while loop
         //area of triangle
-        double area = 0;
+        /*double area = 0;
 
         bool stopProgram = false;
         while (stopProgram == false)
@@ -53,7 +53,25 @@ class Program
             }
             Console.WriteLine("Area of triangle is " +  area);
         } // end while loop
-        
+        */
+
+       
+
+        int a = Convert.ToInt32(Console.ReadLine());
+        int b = Convert.ToInt32(Console.ReadLine());
+        int c = Convert.ToInt32(Console.ReadLine());
+        double area = AreaofTriangle(a, b, c);
+        Debug.WriteLine("Area of traingle is " + area);
 
     }
+    // method
+    private static double AreaofTriangle(int x, int y, int z)
+    {
+        float s = (x + y + z) / 2;
+        double result = Math.Sqrt(s * (s - x) * (s - y) * (s - z));
+        return result;
+    }
 }
+
+
+    
